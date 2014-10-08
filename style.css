@@ -135,3 +135,21 @@ html, body {
 #msgbox input {
 	width: 90%;
 }
+
+#credit {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+	color: #333;
+	text-align: center;
+}
+
+#credit a {
+	color: #555;
+	text-decoration: none;
+}
+
+#credit a:hover {
+	color: #aaa;
+}

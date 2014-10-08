@@ -222,6 +222,7 @@ $(function() {
 		$("#chats").show();
 		$("#msgbox").show();
 		$("#login").fadeOut();
+		$("#credit").hide();
 		username = $("#username").val();
 		init();
 		if ($("#tb_channels").val() != "")

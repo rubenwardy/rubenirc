@@ -1,0 +1,137 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", sans-serif;
+	background: black;
+	color: white;
+}
+#msgbox {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	left: 10px;
+	color: white;
+	display: none;
+}
+#chats {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0px;
+	display: none;
+}
+.channel {
+	position: relative;
+	margin: 0 0 0 20px;
+	width: 400px;
+	display: inline-block;
+	color: #aaa;
+}
+.channel h2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 10px;
+	color: #333;
+	font-size: 100%;
+	font-weight: normal;
+	text-align: center;
+}
+.msg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: rgba(0, 128, 255, 0.2);
+	padding: 5px 10px 10px 10px;
+	border-radius: 5px;
+}
+.msg h3 {
+	display: inline-block;
+	float: left;
+	font-size: 100%;
+	font-weight: normal;
+	color: #00ccff;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+.msg .channel_lbl {
+	display: inline-block;
+	float: right;
+	font-size: 80%;
+	color: #00aacc;
+}
+.msg p {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+.msgnobox {
+	background: transparent !important;
+	padding: 2px 10px 2px 10px;
+	border-radius: 0;
+}
+.msgnobox h3 {
+	display: inline;
+	padding: 0 5px 0 0;
+	margin: 0;
+}
+.msgnobox p {
+	display: inline;
+	color: #aaa;
+}
+.channel_highlight {
+	color: white;
+}
+.channel_highlight h2 {
+	color: #999 !important;
+}
+.channel_highlight .msg {
+	background: rgba(0, 128, 255, 0.4);
+}
+#help {
+	position: fixed;
+	background: #333;
+	color: #aaa;
+	padding: 10px;
+	top: 10px;
+	left: 20%;
+	right: 20%;
+	display: none;
+	border-radius: 4px;
+}
+.button {
+	display: inline-block;
+	padding: 5px 10px 5px 10px;
+	background: rgba(0, 128, 255, 0.4);
+	color: white;
+	border-radius: 5px;
+}
+.button:hover {
+	background: rgba(0, 128, 255, 0.6);
+}
+#login {
+	width: 300px;
+	margin: auto;
+	margin-top: 200px;
+	text-align: center;
+}
+#login h1 {
+	font-size: 150%;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+#login input, #msgbox input {
+	background: black;
+	border: 1px solid #999;
+	padding: 5px;
+	margin: 5px;
+	color: white;
+	width: 200px;
+	border-radius: 5px;
+}
+#msgbox input {
+	width: 90%;
+}

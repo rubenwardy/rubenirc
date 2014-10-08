@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>rubenwardy's IRC client</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="jQuery.min.js"></script>
+		<script src="config.js"></script>
+		<script src="client.js"></script>
+	</head>
+	<body>
+		<div id="chats"></div>
+		<div id="msgbox">
+			<input type="text" id="msg"> <a id="send" class="button">Send</a>
+		</div>
+		<div id="help">
+			/join - Join a channel<br />
+			/help - Show this message
+			
+			<a id="close_help">Close</a>
+		</div>
+		<div id="login">
+			<h1>rubenwardy's IRC client</h1>
+			
+			<input id="username" placeholder="Username" value="rub3nwardy">
+			<br />
+			<input id="tb_channels" placeholder="Channels" value="##rubenBOT">
+			
+			<p>
+				<a class="button" id="connect">Connect</a>
+			</p>
+		</div>
+	</body>
+</html>

@@ -7,6 +7,7 @@ function Client(ip, username, auth)
 	this.msgs = [];
 	this.topics = {};
 	this.client = new irc.Client('irc.freenode.net', username);
+	this.last_received = new Date().getTime();
 	var client = this.client;
 	var user = this;
 	
@@ -62,6 +63,8 @@ function Client(ip, username, auth)
 
 Client.prototype.handle = function(data)
 {
+	this.last_received = new Date().getTime();
+	
 	if (data.id == "send" && data.msg && data.msg != "") {
 		if (data.msg[0] == "/" && (data.msg.length == 1 || data.msg[1] != "/")) {
 			// Do Command
@@ -100,12 +103,27 @@ Client.prototype.handle = function(data)
 	
 };
 
-
+Client.prototype.disconnect = function()
+{
+	this.client.disconnect();
+};
 
 console.log("rubenwardy's IRC proxy server");
 var irc = require('irc');
 var os = require('os');
 var clients = {};
+
+setInterval(function() {
+	for (var username in clients) {
+		var client = clients[username];
+		if (client && new Date().getTime() > client.last_received + 5000) {
+			console.log(username + " timed out!");
+			client.disconnect();
+			delete clients[username];
+		}
+		
+	}
+}, 1000);
 
 /*
 	Handle

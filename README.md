@@ -10,7 +10,7 @@ Installation
 
 ```
 # Download dependencies
-sudo apt-get nodejs npm
+sudo apt-get install nodejs npm
 npm install irc
 
 # Run server

@@ -1,6 +1,8 @@
 RubenIRC
 ========
 
+![Image of RubenIRC](https://cdn.mediacru.sh/vbFGOX_3QuxX.png)
+
 A HTML5 irc client.
 
 Created by rubenwardy.

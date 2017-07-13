@@ -1,8 +1,6 @@
 RubenIRC
 ========
 
-As found here: http://irc.rubenwardy.com/irc/
-
 ![Image of RubenIRC](http://rubenwardy.com/static/portfollio/web_rubenirc_full.png)
 
 A HTML5 irc client.
